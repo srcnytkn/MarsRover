@@ -22,7 +22,7 @@ namespace MarsRover.UnitTest
             Management management = new Management();
             result = management.Manage(areaSize, roverPosition1, roverMoves1);
 
-            Assert.AreEqual(result, "1 3 N");
+            Assert.AreEqual("1 3 N", result);
         }
 
         [TestMethod]
@@ -39,7 +39,7 @@ namespace MarsRover.UnitTest
             Management management = new Management();
             result = management.Manage(areaSize, roverPosition2, roverMoves2);
 
-            Assert.AreEqual(result, "5 1 E");
+            Assert.AreEqual("5 1 E", result);
         }
     }
 }
