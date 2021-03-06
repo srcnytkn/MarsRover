@@ -18,8 +18,14 @@ namespace MarsRover
             var roverMoves2 = Console.ReadLine().ToCharArray();
 
             Management management = new Management();
-            management.Manage(areaSize, roverPosition1, roverMoves1, roverPosition2, roverMoves2);
+            string result;
+            result = management.Manage(areaSize, roverPosition1, roverMoves1);
+            Console.WriteLine(result);
 
+            result = management.Manage(areaSize, roverPosition2, roverMoves2);
+            Console.WriteLine(result);
+
+            return;
         }
     }
 }

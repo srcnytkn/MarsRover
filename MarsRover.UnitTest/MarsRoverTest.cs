@@ -18,10 +18,11 @@ namespace MarsRover.UnitTest
             var roverPosition2 = "3 3 E".Split(' ');
             var roverMoves2 = "MMRMMRMRRM".ToCharArray();
 
+            string result;
             Management management = new Management();
-            management.Manage(areaSize, roverPosition1, roverMoves1, roverPosition2, roverMoves2);
+            result = management.Manage(areaSize, roverPosition1, roverMoves1);
 
-            Assert.AreEqual("1 3 N", "1 3 N");
+            Assert.AreEqual(result, "1 3 N");
         }
 
         [TestMethod]
@@ -34,10 +35,11 @@ namespace MarsRover.UnitTest
             var roverPosition2 = "3 3 E".Split(' ');
             var roverMoves2 = "MMRMMRMRRM".ToCharArray();
 
+            string result;
             Management management = new Management();
-            management.Manage(areaSize, roverPosition1, roverMoves1, roverPosition2, roverMoves2);
+            result = management.Manage(areaSize, roverPosition2, roverMoves2);
 
-            Assert.AreEqual("3 3 E", "3 3 E");
+            Assert.AreEqual(result, "5 1 E");
         }
     }
 }
